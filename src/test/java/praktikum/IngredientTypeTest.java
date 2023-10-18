@@ -2,6 +2,7 @@ package praktikum;
 
 import org.junit.Test;
 
+import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
 public class IngredientTypeTest {
@@ -9,7 +10,7 @@ public class IngredientTypeTest {
     @Test
     public void values() {
         IngredientType[] expected = {IngredientType.SAUCE, IngredientType.FILLING};
-        assertEquals(expected, IngredientType.values());
+        assertArrayEquals(expected, IngredientType.values());
     }
 
     @Test
