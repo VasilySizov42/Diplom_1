@@ -22,9 +22,6 @@ public class BurgerTest {
     Ingredient ingredient1;
     @Mock
     Ingredient ingredient2;
-    @After
-    public void tearDown() throws Exception {
-    }
 
     @Test
     public void setBunsTest() {
