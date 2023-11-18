@@ -24,5 +24,4 @@ public class IngredientTypeTest {
         var expected = IngredientType.FILLING;
         assertEquals(expected, IngredientType.valueOf("FILLING"));
     }
-
 }
