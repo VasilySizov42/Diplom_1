@@ -23,5 +23,4 @@ public class Constants {
     public static final float FILLING_1_PRISE = 200;
     public static final String FILLING_2_NAME = "sausage";
     public static final float FILLING_2_PRISE = 300;
-
 }
