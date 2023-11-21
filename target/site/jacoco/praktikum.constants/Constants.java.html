@@ -3,25 +3,28 @@
 import praktikum.IngredientType;
 
 <span class="nc" id="L5">public class Constants {</span>
-    public static final String BUN_0_NAME = &quot;black bun&quot;;
     public static final float BUN_0_PRISE = 100;
     public static final String BUN_1_NAME = &quot;white bun&quot;;
     public static final float BUN_1_PRISE = 200;
-    public static final String BUN_2_NAME = &quot;red bun&quot;;
-    public static final float BUN_2_PRISE = 300;
-<span class="fc" id="L12">    public static final IngredientType SAUCE_TYPE = IngredientType.SAUCE;</span>
-    public static final String SAUCE_0_NAME = &quot;hot sauce&quot;;
-    public static final float SAUCE_0_PRISE = 100;
-    public static final String SAUCE_1_NAME = &quot;sour cream&quot;;
+<span class="fc" id="L9">    public static final IngredientType SAUCE_TYPE = IngredientType.SAUCE;</span>
     public static final float SAUCE_1_PRISE = 200;
-    public static final String SAUCE_2_NAME = &quot;chili sauce&quot;;
-    public static final float SAUCE_2_PRISE = 300;
-<span class="fc" id="L19">    public static final IngredientType FILLING_TYPE = IngredientType.FILLING;</span>
-    public static final String FILLING_0_NAME = &quot;cutlet&quot;;
-    public static final float FILLING_0_PRISE = 100;
-    public static final String FILLING_1_NAME = &quot;dinosaur&quot;;
-    public static final float FILLING_1_PRISE = 200;
+<span class="fc" id="L11">    public static final IngredientType FILLING_TYPE = IngredientType.FILLING;</span>
     public static final String FILLING_2_NAME = &quot;sausage&quot;;
     public static final float FILLING_2_PRISE = 300;
+<span class="fc" id="L14">    public static final Object[][] BUN_TESTING_DATA = new Object[][] {</span>
+<span class="fc" id="L15">            {&quot;&quot;, -100},</span>
+<span class="fc" id="L16">            {&quot; &quot;, -.01f},</span>
+<span class="fc" id="L17">            {&quot;s&quot;, 0},</span>
+<span class="fc" id="L18">            {&quot;su&quot;, .01f},</span>
+<span class="fc" id="L19">            {&quot;super bun&quot;, 100},</span>
+    };
+<span class="fc" id="L21">    public static final Object[][] INGREDIENT_TESTING_DATA = new Object[][] {</span>
+<span class="fc" id="L22">            {SAUCE_TYPE, &quot;&quot;, -100},</span>
+<span class="fc" id="L23">            {SAUCE_TYPE, &quot; &quot;, -.01f},</span>
+<span class="fc" id="L24">            {SAUCE_TYPE, &quot;s&quot;, 0},</span>
+<span class="fc" id="L25">            {FILLING_TYPE, &quot;su&quot;, .01f},</span>
+<span class="fc" id="L26">            {FILLING_TYPE, &quot;super bun&quot;, 100},</span>
+    };
+
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
