@@ -1,48 +1,30 @@
 package praktikum;
 
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import org.mockito.Mockito;
-import org.mockito.MockitoAnnotations;
-import org.mockito.Spy;
 
-import static praktikum.constants.Constants.*;
+import static praktikum.constants.Constants.BUN_TESTING_DATA;
 
 @RunWith(Parameterized.class)
 public class BunTest {
-    private final int bunNumber;
-    private final String expBunName;
-    private final float expBunPrice;
-    public BunTest(int bunNumber, String expBunName, float expBunPrice) {
-        this.bunNumber = bunNumber;
-        this.expBunName = expBunName;
-        this.expBunPrice = expBunPrice;
+    private final String bunName;
+    private final float bunPrice;
+    public BunTest(String bunName, float bunPrice) {
+        this.bunName = bunName;
+        this.bunPrice = bunPrice;
     }
-    @Before
-    public void setUp() {
-        MockitoAnnotations.initMocks(this);
-    }
-    @Spy
-    Database database = new Database();
     Bun bun;
 
-    @Parameterized.Parameters(name = "Тест булки. Тестовые данные: номер в базе-{0} название-{1} цена-{2}")
+    @Parameterized.Parameters(name = "Тест булки. Тестовые данные: название-{0} цена-{1}")
     public static Object[][] params() {
-        return new Object[][] {
-                { 0, BUN_0_NAME, BUN_0_PRISE},
-                { 1, BUN_1_NAME, BUN_1_PRISE},
-                { 2, BUN_2_NAME, BUN_2_PRISE},
-        };
+        return BUN_TESTING_DATA;
     }
     @Test
     public void getNameTest() {
-        bun = database.availableBuns().get(bunNumber);
-        Mockito.verify(database, Mockito.times(1)).availableBuns();
-        Mockito.verifyNoMoreInteractions(database);
-        String expected = expBunName;
+        bun = new Bun(bunName, bunPrice);
+        String expected = bunName;
         String actual = bun.getName();
 
         Assert.assertEquals(expected, actual);
@@ -50,10 +32,8 @@ public class BunTest {
 
     @Test
     public void getPriceTest() {
-        bun = database.availableBuns().get(bunNumber);
-        Mockito.verify(database, Mockito.times(1)).availableBuns();
-        Mockito.verifyNoMoreInteractions(database);
-        Float expected = expBunPrice;
+        bun = new Bun(bunName, bunPrice);
+        Float expected = bunPrice;
         Float actual = bun.getPrice();
 
         Assert.assertEquals(expected, actual);

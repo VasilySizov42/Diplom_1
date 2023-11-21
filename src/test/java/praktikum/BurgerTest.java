@@ -1,20 +1,16 @@
 package praktikum;
 
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.Mockito;
-import org.mockito.MockitoAnnotations;
+import org.mockito.junit.MockitoJUnitRunner;
 
 import static praktikum.constants.Constants.*;
 
+@RunWith(MockitoJUnitRunner.class)
 public class BurgerTest {
-
-    @Before
-    public void setUp() {
-        MockitoAnnotations.initMocks(this);
-    }
     @Mock
     Bun bun;
     @Mock
